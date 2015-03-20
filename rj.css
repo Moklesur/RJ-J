@@ -6,13 +6,13 @@ a.flex-prev{
   margin-left: -25px;
   width: 32px;
   height: 32px;
-  background-image: url('');
+  background-image: url('/sites/all/themes/jiggco/img/slide-l-arrow1.png');
 }
 a.flex-next{
   width: 32px;
   height: 32px;
   margin-right: -5px;
-  background-image: url('');
+  background-image: url('/sites/all/themes/jiggco/img/slide-r-arrow1.png');
 }
 .ep-content-show h2{
   font-size: 1.2rem;
