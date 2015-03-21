@@ -1451,8 +1451,8 @@ ul.flex-direction-nav:after {
   margin: 1em 0;
 }
 .speaker-row img {
-  padding: 5px 10px 5px 10px;
-  margin-top: -20px;
+  padding: 0;
+  margin-top: -20px 10px 5px 10px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50% !important;
