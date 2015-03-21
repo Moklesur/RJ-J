@@ -1491,6 +1491,7 @@ ul.flex-direction-nav:after {
 .ep-content-show h2 {
   text-transform: uppercase;
   font-size: 1.5rem;
+    font-size: 22px;
   padding: 0 1em;
   color: #fff;
   margin-bottom: 0;
