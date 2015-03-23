@@ -2,7 +2,7 @@
     Drupal.behaviors.jiggco = {
         attach: function(context, settings) {
             var link = $("div.background-image").html();
-            var css = '.node-type-profile #member { background-image: url("' + link + '")}',
+            var css = '.node-type-profile #member,.video-show-landing #member,.radio-show-landing #member { background-image: url("' + link + '")}',
                 head = document.head || document.getElementsByTagName('head')[0],
                 style = document.createElement('style');
             style.type = 'text/css';
@@ -37,21 +37,21 @@
             });
             $('#Container').mixItUp();
             $('#title-nav-hover li').mouseenter(function() {
-                $('.title-nav a.active').addClass('title-nav-focus');
+                //$('.title-nav a.active').addClass('title-nav-focus');
             }).mouseout(function() {
-                $('.title-nav a.active').removeClass('title-nav-focus');
+                //$('.title-nav a.active').removeClass('title-nav-focus');
             });
             $('#user-menu a.account').mouseenter(function() {
                 $(this).addClass('account-on');
             });
             $('#user-menu ul.account-d').mouseout(function() {
-                $('#user-menu a.account').delay(2800).removeClass('account-on');
+                //$('#user-menu a.account').delay(2800).removeClass('account-on');
             });
             $('#user-menu a.cart').mouseenter(function() {
-                $(this).addClass('cart-on');
+                //$(this).addClass('cart-on');
             });
             $('#user-menu ul.cart-d').mouseout(function() {
-                $('#user-menu a.cart').delay(800).removeClass('cart-on');
+                //$('#user-menu a.cart').delay(800).removeClass('cart-on');
             });
             $('.p-type li button').on('click', function() {
                 var id = $(this).attr('data-filter');
@@ -97,15 +97,48 @@
                 touch: true,
                 after: function() {}
             });
-            $('#flexslider-40').flexslider({
+
+            $(window).load(function() {
+                var target_flexslider = $('#flexslider-40');
+                target_flexslider.flexslider({
+                    animation: Modernizr.touch ? "slide" : "slide",
+                    itemWidth: 350,
+                    itemMargin: 5,
+                    minItems: 1,
+                    maxItems: 9,
+                    slideshow: false,
+                    controlNav: false,
+                    start: function(slider) {
+                        target_flexslider.removeClass('loading');
+                    }
+
+                });
+
+            });
+            $('.flexslider').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
                 itemWidth: 350,
                 itemMargin: 5,
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function (slider) {
+                    // lazy load
+                    $(slider).find("img.lazy").slice(0,5).each(function () {
+                        var src = $(this).attr("data-src");
+                        $(this).attr("src", src).removeAttr("data-src").removeClass("lazy");
+                    });
+                },
+                before: function (slider) {
+                    // lazy load
+                    var slide = $(slider).find('.slides').children().eq(slider.animatingTo+1).find('img');
+                    var src = slide.attr("data-src");
+                    slide.attr("src", src).removeAttr("data-src").removeClass("lazy");
+                }
             });
+
+
             $('#flexslider-150').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
                 itemWidth: 350,
@@ -233,6 +266,69 @@
                 controlNav: false
             });
             $('#flexslider-audio-102767').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-75030').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-2743').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-2746').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-2742').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-2545').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-107761').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-103203').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
                 itemWidth: 350,
                 itemMargin: 5,

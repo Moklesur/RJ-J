@@ -194,71 +194,101 @@ h2.search-subtitle,
   font-weight: 300;
 }
 /* User Cart Contents and Menu */
-#user-menu a.cart {
-  background-image: url('../img/icons/cart-icon.png');
-  background-repeat:no-repeat;
+#user-menu li.cart,
+#user-menu li.account {    
   display: inline-block;
   height: 102px;
   padding: 0.25em;
-  width: 50%;
-  margin: 0.5rem 0.5rem 0 0.5rem;
+    width: 45%;
+    margin-top: 0.5rem;
 }
-#user-menu a.cart-on {
+#user-menu li.cart {
+    background-image: url('../img/icons/cart-icon.png');
+    background-repeat:no-repeat;
+}
+#user-menu li.cart:hover {
   background-image: url('../img/icons/cart-icon-h.png');
   background-color: rgba(26,28,53, 0.95);
   border-radius: 0.5rem 0.5rem 0 0;
 }
-#user-menu a.cart-on + ul.cart-d {
-  display: block;
+#user-menu li.cart + ul.cart-d {
   background-color: rgba(26,28,53, 0.95);
 }
 /* User Account Menu */
-#user-menu a.account {
+#user-menu li.account {
   background-image: url('../img/icons/my-account.png');
   background-repeat:no-repeat;
-  display: inline-block;
-  height: 102px;
-  padding: 0.25em;
-  width: 68px;
-  position: absolute;
-  right: 0;
-  margin: 0.5rem 0.5rem 0 0.5rem;
 }
-#user-menu a.account-on {
+#user-menu li.account:hover {
   background-image: url('../img/icons/my-account-h.png');
   background-color: rgba(26,28,53, 0.95);
   border-radius: 0.5rem 0.5rem 0 0;
 }
-#user-menu a.account-on + ul.account-d {
-  display: block;
+#user-menu li.account + ul.account-d {
   background-color: rgba(26,28,53, 0.95);
 }
 .cart-d,
 .account-d {
-  display: none;
   background-color: rgba(26,28,53, 0.95);
   padding: 0.5em 1.5em;
   list-style-type: none;
   border-radius: 0.5rem 0 0.5rem 0.5rem;
-  margin-left: -7.5rem;
-  margin-right: 0.5rem;
-  z-index: 11;
-  position: absolute;
-  right: 0;
-  margin-top: -0.45rem;
-}
-.cart-d {
-  margin-right: 4.5rem;
-  min-width: 15rem;
 }
 #cart-items {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: 1.2rem;
-  margin-top: 0.95rem;
+    margin-left: 0.75rem;
+    margin-top: 0.4rem;
   font-weight: 600;
   color: #ff6138;
+}
+.user-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+.user-navigation li {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+  
+.user-navigation li a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.user-navigation li:hover {
+    transition:background, 0.2s;
+    cursor: pointer;
+}
+
+.user-navigation ul li ul {
+    visibility: hidden;
+    min-width: 150px;
+    position: absolute;
+    transition: visibility 0.65s ease-in;
+    left: -30rem;
+    top: 6.35rem;
+    z-index: 999;
+}
+
+.user-navigation ul li:hover > ul,
+.user-navigation ul li ul:hover {
+   visibility: visible;
+}
+
+.user-navigation ul li ul li {
+    clear: both;
+    padding: 5px 0 5px 18px;
+  width: 100%;
+}
+
+.user-navigation ul li ul li:hover {
+
 }
 a.logout,
 a.logout:active,
@@ -566,8 +596,6 @@ h1.title {
 }
 .people-landing #member {
   background-image: url('../img/SR_PeopleDetails_Bkg.jpg');
-  background-color: #ff6138;
-  background-blend-mode: luminosity;
 }
 .node-type-profile #member {
   background-image: url('../img/SR_PeopleDetails_Bkg.jpg');
@@ -575,12 +603,15 @@ h1.title {
   background-blend-mode: luminosity;
 }
 .video-show-landing #member {
-  background-image: url('../img/SR_PeopleDetails_Bkg.jpg');
-  background-color: green;
+    background-image: url('../img/SR_VideoShowLanding.jpg');
+    background-color: #00FF00;
   background-blend-mode: luminosity;
 }
+.flex-control-nav {
+    visibility: hidden;
+}
 .radio-show-landing #member {
-  background-image: url('../img/SR_PeopleDetails_Bkg.jpg');
+    background-image: url('../img/SR_RadioShowLanding.jpg');
   background-color: #2b317b;
   background-blend-mode: luminosity;
 }
@@ -1328,7 +1359,9 @@ article.video-content footer {
   background: url('../img/icons/product-icon.png') 50% 50% no-repeat;
 }
 .player-container {
-  backbground-color: #000;
+  background-image: url('../img/SR_AudioPlayer_R2.jpg');
+  background-size: cover;
+  height: 100%;
 }
 .videolocked {
   color: #fff;
@@ -1624,16 +1657,25 @@ ul.topic-term-links li {
   .call-to-action footer {
     left: 20%;
   }
-   .button.all-episodes a:link{
+} /* min-width 360px  */
+
+@media only screen and (min-width: 22.500em) {  /* min-width 360px  */
+    .call-to-action .price {
+        left: 20%;
+ }
+    .call-to-action .price span {
+        font-size: 9rem;
+ }
+    .call-to-action footer {
+        left: 20%;
+    }
+	 .button.all-episodes a:link{
 	font-size:21px
  }
  .button.all-episodes{
    margin-top: 15px;
  }
-  
 } /* min-width 360px  */
-
-
 /*		Mobile Layout    */
 
 @media only screen and (max-width: 767px){
@@ -1683,5 +1725,3 @@ div.episode {
  }
  
 }
-
-
