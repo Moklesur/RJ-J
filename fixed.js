@@ -88,6 +88,9 @@
                 directionNav: false,
                 controlsContainer: "#controls",
                 touch: true,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                },
                 after: function() {}
             });
             $('.pane-situation-room-panes-panel-pane-23').flexslider({
