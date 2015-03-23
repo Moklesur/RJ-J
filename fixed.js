@@ -116,7 +116,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-156').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -125,7 +128,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-103201').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -134,7 +140,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-2620').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -143,7 +152,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-2748').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -152,7 +164,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-95277').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -161,7 +176,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-102767').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -170,7 +188,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-40').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -179,7 +200,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-150').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -188,7 +212,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-156').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -197,7 +224,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-103201').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -206,7 +236,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-2620').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -215,7 +248,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-2748').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -224,7 +260,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-95277').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -233,7 +272,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-102767').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -242,7 +284,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-75030').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -251,7 +296,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-2743').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -260,7 +308,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-2746').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -269,7 +320,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-2742').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -278,7 +332,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-2545').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -287,7 +344,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-107761').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -296,7 +356,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('#flexslider-audio-103203').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -305,7 +368,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('.flexslider-video-related').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
@@ -314,7 +380,10 @@
                 minItems: 1,
                 maxItems: 9,
                 slideshow: false,
-                controlNav: false
+                controlNav: false,
+                start: function(slider) {
+                    slider.removeClass('loading');
+                }
             });
             $('img.player-c').click(function() {
                 parent.history.back();
