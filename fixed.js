@@ -313,20 +313,19 @@
                 slideshow: false,
                 controlNav: false
             });
-            $("#member").introLoader();
-                $("#member").introLoader({
-                    animation: {
-                        name: 'simpleLoader',
-                        options: {
-                            exitFx:'fadeOut',
-                            ease: "linear",
-                            style: 'light',
-                            delayBefore: 500,
-                            exitTime: 300
-                        }
-                    },
-                    spinJs: {}
-                });
+            $("#members").introLoader({
+                animation: {
+                    name: 'simpleLoader',
+                    options: {
+                        exitFx:'fadeOut',
+                        ease: "linear",
+                        style: 'light',
+                        delayBefore: 500,
+                        exitTime: 300
+                    }
+                },
+                spinJs: {}
+            });
             $('img.player-c').click(function() {
                 parent.history.back();
                 return false;
