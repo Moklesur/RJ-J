@@ -1630,12 +1630,7 @@ ul.topic-term-links li {
  .button.all-episodes{
    margin-top: 15px;
  }
-    div.button.all-episodes a:link{
-	font-size:21px
- }
- div.button.all-episodes{
-   margin-top: 15px;
- }
+
 } /* min-width 360px  */
 
 
