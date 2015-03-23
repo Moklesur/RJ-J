@@ -97,25 +97,7 @@
                 touch: true,
                 after: function() {}
             });
-
-            $(window).load(function() {
-                var target_flexslider = $('#flexslider-40');
-                target_flexslider.flexslider({
-                    animation: Modernizr.touch ? "slide" : "slide",
-                    itemWidth: 350,
-                    itemMargin: 5,
-                    minItems: 1,
-                    maxItems: 9,
-                    slideshow: false,
-                    controlNav: false,
-                    start: function(slider) {
-                        target_flexslider.removeClass('loading');
-                    }
-
-                });
-
-            });
-            $('.flexslider').flexslider({
+            $('#flexslider-40').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
                 itemWidth: 350,
                 itemMargin: 5,
@@ -123,22 +105,10 @@
                 maxItems: 9,
                 slideshow: false,
                 controlNav: false,
-                start: function (slider) {
-                    // lazy load
-                    $(slider).find("img.lazy").slice(0,5).each(function () {
-                        var src = $(this).attr("data-src");
-                        $(this).attr("src", src).removeAttr("data-src").removeClass("lazy");
-                    });
-                },
-                before: function (slider) {
-                    // lazy load
-                    var slide = $(slider).find('.slides').children().eq(slider.animatingTo+1).find('img');
-                    var src = slide.attr("data-src");
-                    slide.attr("src", src).removeAttr("data-src").removeClass("lazy");
+                start: function(slider) {
+                    slider.removeClass('loading');
                 }
             });
-
-
             $('#flexslider-150').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
                 itemWidth: 350,
