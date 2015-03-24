@@ -194,6 +194,9 @@ h2.search-subtitle,
     font-weight: 300;
 }
 /* User Cart Contents and Menu */
+#user-menu {
+    display: none;
+}
 #user-menu li.cart,
 #user-menu li.account {
     display: inline-block;
@@ -458,7 +461,6 @@ h1.title {
     margin-left: 1rem;
     line-height: 1;
     padding-bottom: 0.25em;
-    font-size: 5rem;
 }
 .person-title span,
 .show-title span {
@@ -592,21 +594,18 @@ h1.title {
 }
 .today-landing {}
 .shows-landing #member {
-    background-image: url('../img/show-top-bg.jpg');
+    background-image: url('../img/nonmember-world-background.jpg');
 }
 .people-landing #member {
     background-image: url('../img/SR_PeopleDetails_Bkg.jpg');
-    background-repeat: no-repeat;
 }
 .node-type-profile #member {
     background-image: url('../img/SR_PeopleDetails_Bkg.jpg');
-    background-repeat: no-repeat;
     background-color: #ff6138;
     background-blend-mode: luminosity;
 }
 .video-show-landing #member {
     background-image: url('../img/SR_VideoShowLanding.jpg');
-    background-repeat: no-repeat;
     background-color: #00FF00;
     background-blend-mode: luminosity;
 }
@@ -615,13 +614,11 @@ h1.title {
 }
 .radio-show-landing #member {
     background-image: url('../img/SR_RadioShowLanding.jpg');
-    background-repeat: no-repeat;
     background-color: #2b317b;
     background-blend-mode: luminosity;
 }
 .library-landing #member {
     background-image: url('../img/library_bkg.jpg');
-    background-repeat: no-repeat;
 }
 .background-image {
     display: none;
@@ -653,7 +650,7 @@ h1.title {
     font-size: 1.5rem;
 }
 .feature-person h2 {
-    font-size: 5rem;
+    font-size: 4rem;
     width: 50%;
     line-height: 1;
     color: #fff;
@@ -1083,7 +1080,8 @@ a.white:hover,
     display: block;
     color: #9fa0ba;
 }
-#loader {
+#loader,
+.loader {
     position: fixed;
     top: 0;
     left: 15%;
@@ -1597,7 +1595,7 @@ ul.flex-direction-nav:after {
     position: absolute;
     right: 30%;
     top: 0.5em;
-    z-index: 99999;
+    z-index: 999;
     border: none;
 }
 ul.primary {
@@ -1721,16 +1719,10 @@ ul.topic-term-links li {
 
 }
 @media only screen and (max-width:320px){
-
     .button.all-episodes a:link{
         font-size:21px
     }
     .button.all-episodes{
         margin-top: 15px;
     }
-
-}
-.loading {
-    min-height: 300px;
-    background: url(loader.gif) no-repeat center center;
 }
