@@ -596,14 +596,17 @@ h1.title {
 }
 .people-landing #member {
     background-image: url('../img/SR_PeopleDetails_Bkg.jpg');
+    background-repeat: no-repeat;
 }
 .node-type-profile #member {
     background-image: url('../img/SR_PeopleDetails_Bkg.jpg');
+    background-repeat: no-repeat;
     background-color: #ff6138;
     background-blend-mode: luminosity;
 }
 .video-show-landing #member {
     background-image: url('../img/SR_VideoShowLanding.jpg');
+    background-repeat: no-repeat;
     background-color: #00FF00;
     background-blend-mode: luminosity;
 }
@@ -612,11 +615,13 @@ h1.title {
 }
 .radio-show-landing #member {
     background-image: url('../img/SR_RadioShowLanding.jpg');
+    background-repeat: no-repeat;
     background-color: #2b317b;
     background-blend-mode: luminosity;
 }
 .library-landing #member {
     background-image: url('../img/library_bkg.jpg');
+    background-repeat: no-repeat;
 }
 .background-image {
     display: none;
