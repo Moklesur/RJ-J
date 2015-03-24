@@ -30,6 +30,7 @@
                         $(this).children().removeClass('hover');
                     }
                 },
+
                 auto: true
             });
             $('#Container').mixItUp();
