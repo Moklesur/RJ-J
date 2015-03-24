@@ -32,7 +32,6 @@
                 },
                 auto: true
             });
-            
             $('#Container').mixItUp();
             $('#title-nav-hover li').mouseenter(function() {
                 //$('.title-nav a.active').addClass('title-nav-focus');
