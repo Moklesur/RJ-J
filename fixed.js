@@ -19,21 +19,19 @@
             });
             $('#sp-carousel').carouFredSel({
                 width: '100%',
-                items: {
-                    visible: 'odd+2'
-                },
+                items: 10,
                 scroll: {
                     pauseOnHover: true,
+                    items: 1,
+                    easing: 'linear',
+                    duration: 3000,
+                    timeoutDuration: 0,
                     onBefore: function() {
                         $(this).children().removeClass('hover');
                     }
                 },
-                auto: {
-                    items: 1,
-                    easing: 'linear',
-                    duration: 3000,
-                    timeoutDuration: 0
-                }
+
+                auto: true
             });
             $('#Container').mixItUp();
             $('#title-nav-hover li').mouseenter(function() {
@@ -305,6 +303,51 @@
                 controlNav: false
             });
             $('.flexslider-video-related').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-topic-742').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-topic-745').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-topic-748').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-topic-751').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-topic-754').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
                 itemWidth: 350,
                 itemMargin: 5,
