@@ -2,7 +2,7 @@
     Drupal.behaviors.jiggco = {
         attach: function(context, settings) {
             var link = $("div.background-image").html();
-            var css = '.node-type-profile #member { background-image: url("' + link + '")}',
+            var css = '.node-type-profile #member,.video-show-landing #member,.radio-show-landing #member { background-image: url("' + link + '")}',
                 head = document.head || document.getElementsByTagName('head')[0],
                 style = document.createElement('style');
             style.type = 'text/css';
@@ -19,39 +19,36 @@
             });
             $('#sp-carousel').carouFredSel({
                 width: '100%',
-                items: {
-                    visible: 'odd+2'
-                },
+                items: 10,
                 scroll: {
                     pauseOnHover: true,
+                    items: 1,
+                    easing: 'linear',
+                    duration: 3000,
+                    timeoutDuration: 0,
                     onBefore: function() {
                         $(this).children().removeClass('hover');
                     }
                 },
-                auto: {
-                    items: 1,
-                    easing: 'linear',
-                    duration: 3000,
-                    timeoutDuration: 0
-                }
+                auto: true
             });
             $('#Container').mixItUp();
             $('#title-nav-hover li').mouseenter(function() {
-                $('.title-nav a.active').addClass('title-nav-focus');
+                //$('.title-nav a.active').addClass('title-nav-focus');
             }).mouseout(function() {
-                $('.title-nav a.active').removeClass('title-nav-focus');
+                //$('.title-nav a.active').removeClass('title-nav-focus');
             });
             $('#user-menu a.account').mouseenter(function() {
                 $(this).addClass('account-on');
             });
             $('#user-menu ul.account-d').mouseout(function() {
-                $('#user-menu a.account').delay(2800).removeClass('account-on');
+                //$('#user-menu a.account').delay(2800).removeClass('account-on');
             });
             $('#user-menu a.cart').mouseenter(function() {
-                $(this).addClass('cart-on');
+                //$(this).addClass('cart-on');
             });
             $('#user-menu ul.cart-d').mouseout(function() {
-                $('#user-menu a.cart').delay(800).removeClass('cart-on');
+                //$('#user-menu a.cart').delay(800).removeClass('cart-on');
             });
             $('.p-type li button').on('click', function() {
                 var id = $(this).attr('data-filter');
@@ -241,6 +238,69 @@
                 slideshow: false,
                 controlNav: false
             });
+            $('#flexslider-audio-75030').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-2743').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-2746').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-2742').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-2545').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-107761').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-audio-103203').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
             $('.flexslider-video-related').flexslider({
                 animation: Modernizr.touch ? "slide" : "slide",
                 itemWidth: 350,
@@ -249,6 +309,64 @@
                 maxItems: 9,
                 slideshow: false,
                 controlNav: false
+            });
+            $('#flexslider-topic-742').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-topic-745').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-topic-748').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-topic-751').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $('#flexslider-topic-754').flexslider({
+                animation: Modernizr.touch ? "slide" : "slide",
+                itemWidth: 350,
+                itemMargin: 5,
+                minItems: 1,
+                maxItems: 9,
+                slideshow: false,
+                controlNav: false
+            });
+            $("#members").introLoader({
+                animation: {
+                    name: 'simpleLoader',
+                    options: {
+                        exitFx:'fadeOut',
+                        ease: "linear",
+                        style: 'light',
+                        delayBefore: 500,
+                        exitTime: 300
+                    }
+                },
+                spinJs: {}
             });
             $('img.player-c').click(function() {
                 parent.history.back();
